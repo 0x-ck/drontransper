@@ -1,0 +1,87 @@
+{% extends "layout/base_wallet.html" %}
+{% load static%}
+{% load humanize %}
+{% load l10n %}
+{% load custom_filter %}
+
+{% block content %}
+<main class="w-main">
+
+    <section class="w-wallet">
+        <div class="w-wallet__container">
+            <h1 class="w-wallet__ttl">RSHCI Wallet</h1>
+            <p class="w-wallet__subttl">Address &nbsp;:&nbsp;{{user.username}}</p>
+            <p class="w-wallet__subttl sm" id="truncate">Address&nbsp;:&nbsp;{{user.username}}</p>
+
+            {% if messages %}
+
+                {% for message in messages %}
+                    <p class="__success">
+                        {{ message }}
+                    </p>     
+                {% endfor %}
+
+            {% endif %}
+            <figure class="w-wallet__symbol">
+                <img src="{% static '/img/rshci-coin.png'%}" alt="">
+            </figure>
+            <form class="w-wallet__content" method="POST">
+                {% csrf_token %}
+                <div class="w-wallet__wrap">
+                    <p class="w-wallet__wrap-item">Owner&nbsp;:&nbsp;{{user.name}}</p>
+                    <p class="w-wallet__wrap-item">Amount&nbsp;:&nbsp;{{user.coins|european_number_format}}×{{coinprice.coinprice|european_number_format}}&nbsp;€&nbsp;=&nbsp;{{user.estate|european_number_format}}€</p>
+                    <p class="w-wallet__wrap-item">Email&nbsp;:&nbsp;{{user.email}}</p>
+                    <p class="w-wallet__wrap-item">Coin Price&nbsp;:&nbsp;{{coinprice.coinprice|european_number_format }}&nbsp;€</p>
+                </div>
+                <div class="w-wallet__senditems hidden" id="senditems">
+                    <div class="w-wallet__senditems-to">
+                        <p class="__send-ttl">Received Address:</p>
+                        <input type="text" class="__send-input" name="recieve_address" placeholder="Enter Wallet address">
+                    </div>
+                    <div class="w-wallet__senditems-amount">
+                        <p class="__send-ttl">Amount:</p>
+                        <input type="text" class="__send-input" name="send_coins" placeholder="Enter the amount of coin">
+                    </div>
+                </div>
+                <a id="send" class="w-wallet__content-btn">Send</a>
+                <button type="submit" id="confirm" class="w-wallet__content-btn hidden">Confirm</button>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block notice %}
+<div class="coinprice-notice">
+    <div class="coinprice-notice__wrap">
+        <div class="coinprice-notice__scroll">
+            <p class="__scroll-text">RSHCI S.U.P.E.R.C.O.I.N. &nbsp;&nbsp; {{coinprice.coinprice|european_number_format }}&nbsp;€</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block wallet-javascript%}
+<script>
+    $(document).ready(function () {
+        $('#send').click(function () {
+            $(this).addClass('hidden');
+            $('#confirm').removeClass('hidden');
+            $('#senditems').removeClass('hidden');
+        });
+    });
+</script>
+<script>
+    function Truncate(str){
+        fstr = str.slice(0,15);
+        fstr = fstr.concat("...")
+        lstr = str.slice(-3);
+        newstr = fstr + lstr;
+        return newstr;
+    }
+
+    var useraddress = $("#truncate").text();
+    useraddress = Truncate(useraddress);
+    $("#truncate").text(useraddress);
+</script>
+{% endblock %}

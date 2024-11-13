@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static '/css/hompage/style.css'%}">
+  <link rel="stylesheet" href="{% static '/css/hompage/wow.css'%}">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <title>RSHCI Coin</title>
+</head>
+
+<body>
+    {% block notice %}{% endblock %}
+  <header class="c-header">
+    <figure class="c-header__logo">
+        <img src="{% static '/img/top/rshci-logo(top).png'%}" alt="">
+    </figure>
+    <div class="c-header__menu">
+        <a href="/#home" class="c-header__menu--item">HOME</a>
+        <a href="/#about" class="c-header__menu--item">ABOUT US</a>
+        <a href="/#service" class="c-header__menu--item">OUR SERVICES</a>
+        <a href="/#contact" class="c-header__menu--item">CONTACT US</a>
+
+    </div>
+    <a href="/login">
+        <div class="c-header__wallet">
+            <figure class="c-header__wallet-symbol">
+                <img src="{% static '/img/top/crypto-bag.png'%}" alt="">
+            </figure>
+            <p>Connect Wallet</p>
+        </div>
+    </a>
+</header>
+  {% block content %} {% endblock %}
+  <footer class="c-footer">
+    <div class="c-footer__container">
+        <figure class="c-footer__logo">
+           <img src="{% static '/img/top/rshci-logo(top).png'%}" alt="">
+        </figure>
+        <div class="c-footer__items">
+            <div class="c-footer__item">
+                <h1 class="__item--ttl">Quick Links</h1>
+                <div class="__item--links">
+                    <a href="/#home" class="__item--link">Home</a>
+                    <a href="/#about" class="__item--link">About Us</a>
+                    <a href="/#service" class="__item--link">Our Services</a>
+                    <a href="mailto:rshcint@gmail.com" class="__item--link">Contact Us</a>
+                </div>
+            </div>
+            <div class="c-footer__item">
+                <h1 class="__item--ttl">Contact Us</h1>
+                <div class="__item--links">
+                    <a href="mailto:rshcint@gmail.com" class="__item--link">rshcint@gmail.com</a>
+                    <a href="https://t.me/RSHCINT" class="__item--link">Telegram : @RSHCINT </a>
+                    <a href="/terms" class="__item--link">Terms of use</a>
+                    <a href="/cookie" class="__item--link">Cookie policy</a>
+                    <a href="/privacy" class="__item--link">Privacy policy</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="c-footer_la">RSHC INTERNATIONAL© 2024 rshci.com . All rights reserved</p>
+</footer>
+<div class="Cookie-modal" id="cookie-modal">
+    <h1 class="Cookie-modal__ttl">Cookie Policy</h1>
+    <p class="Cookie-modal__subttl">By using rshci.com you agree to the use of cookies.<br> You can find details on how we use cookies in our Cookie Policy.</p>
+    <div class="Cookie-modal__btngroup">
+        <a href="cookie/" class="Cookie-modal__link">Read More</a>
+        <button class="Cookie-modal__link" id="accept-btn">Accept all</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static '/js/homepage/wow.js'%}"></script>
+<script src="{% static '/js/homepage/particle.js'%}"></script>
+<script src="{% static '/js/homepage/count-to.js'%}"></script>
+
+
+<script>
+    new WOW().init();
+    $('.timer').countTo();
+    $(window).scroll(function() {
+        var windowBottom = $(".timer").scrollTop() + $(".timer").innerHeight();
+        var elementTop = $('#fun-fact').offset().top;
+
+        if (elementTop < windowBottom - 100) { // Adjust the offset as needed
+                $('.timer').countTo();
+            // Remove the scroll listener to avoid repetitive counting
+                $(window).off('scroll');
+            }
+        });
+
+   
+</script>
+<script>
+     $(document).ready(function() {
+        var cookieModal = $('#cookie-modal');
+        var acceptButton = $('#accept-btn');
+
+     // Check if the cookie has been accepted
+        var accepted = window.localStorage.getItem('cookieAccepted');
+
+        if (!accepted) {
+    // If not accepted, show the modal
+            cookieModal.addClass("is-active");
+        }
+    // Add event listener to the accept button
+    acceptButton.click(function() {
+    // Set the cookie as accepted
+            localStorage.setItem('cookieAccepted', true);
+    // Hide the modal
+            cookieModal.removeClass("is-active");
+        });
+    });
+</script>
+
+{% block javascript %} {% endblock %}
+</body>
+
+</html>

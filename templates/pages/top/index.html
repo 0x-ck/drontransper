@@ -1,0 +1,407 @@
+{% extends "layout/base.html" %}
+{% load static%}
+{% load l10n %}
+{% load custom_filter %}
+{% block content %}
+
+
+<main class="p-main">
+    <div id="particles-js" class="particle"></div>
+    <section class="p-fv" id="home">
+        <div class="p-fv__container wow fadeInUp">
+            <div class="p-fv__content">
+                <h1 class="p-fv__content--ttl">Robusto Societe<br>
+                    Helvetia Capitale <br>Internationale</h1>
+                <a href="http://RSHCINT.com" class="p-fv__content--url">RSHCINT.com</a>
+                <p class="p-fv__content--subttl">
+                    We are in the process of acquiring our own full banking license, so we will comply with the law
+                    and create something completely new with huge potential.
+                    Reserve and buy your RSHCI coins now.
+                </p>
+                <a href="#contact" class="p-fv__content--link">
+                    <span>Apply Here</span>
+                </a>
+                <div class="p-fv__content--num">
+                    <div class="__num-item" id="fun-fact">
+                            <span class="timer " data-to="7500 " data-speed="3000 "></span>
+                            <span class="__num-item_ttl">User</span>
+                    </div>
+                    <div class="__num-item" id="fun-fact">
+                        <span class="timer " data-to="100" data-speed="3000 "></span>
+                        <span class="__num-item_ttl">Teams</span>
+                    </div>
+                    <div class="__num-item" id="fun-fact">
+                        <span class="timer " data-to="30" data-speed="3000 "></span>
+                        <span class="__num-item_ttl">Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <figure class="p-fv__img">
+                <img src="{% static '/img/top/p-fv_bg.png'%}" alt="">
+            </figure>
+
+        </div>
+    </section>
+    <section class="p-about" id="about">
+        <div class="p-about__container wow fadeInUp">
+            <figure class="p-about__img">
+                <img src="{% static '/img/top/p-about.png'%}" alt="">
+            </figure>
+            <div class="p-about__content">
+                <p class="p-about__content--deco">
+                    About Us
+                </p>
+                <h1 class="p-about__content--ttl">
+                    Meet the<br>Visionaries Behind<br>RSHCI Foundation
+                </h1>
+                <p class="p-about__content--subttl">RSHCI COIN is a central crypto currency limited to 1.000.000.000
+                    - 1 billion coins. Its value can only increase and cannot be manipulated downward through sales.
+                    The coin owners sell their coins on the open market and not back to us. We will sell the RSHCI
+                    through our own exchange and operate independently of all other‘s.</p>
+                <a href="#contact" class="p-about__content--link">
+                    <span>Read More</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="p-service" id="service">
+        <div class="p-service__container wow bounceInUp">
+            <p class="p-service__deco">Our Service</p>
+            <h1 class="p-service__ttl">RSHCI<br>The Bank for Seniors, Businesses and Successful People</h1>
+            <p class="p-service__subttl">Our mission is to become a bank with specialties in services and easy handling, we are offering you your personal Assistent to help you with all your needs. Zoom calls, Video calls, whatever you prefer. Best interest quotes, fair mortgages, become a part of the bank of the future. With our coins you are doing a safe and smart investment.</p>
+            <div class="p-service__items">
+                <div class="p-service__item">
+                    <span class="__item-img">
+                        <img src="{% static '/img/top/p-service_item1.png'%}" alt="">
+                    </span>
+                    <h1 class="__item-ttl">Blockchain Solutions</h1>
+                    <p class="__item-subttl">Transforming renewable energy with blockchain. Secure, transparent, and
+                        efficient transactions for a sustainable future. Explore our solutions today!</p>
+                </div>
+                <div class="p-service__item">
+                    <span class="__item-img">
+                        <img src="{% static '/img/top/p-service_item2.png'%}" alt="">
+                    </span>
+                    <h1 class="__item-ttl">Real Estate Solutions</h1>
+                    <p class="__item-subttl">At RSHCI Foundation, we offer comprehensive Real Estate Solutions
+                        designed to elevate properties to new heights of sustainability, efficiency, and value. </p>
+                </div>
+                <div class="p-service__item">
+                    <span class="__item-img">
+                        <img src="{% static '/img/top/p-service_item3.png'%}" alt="">
+                    </span>
+                    <h1 class="__item-ttl">Hydrogen Technology
+                        Solutions</h1>
+                    <p class="__item-subttl">Services related to the use of hydrogen technology for renewable energy
+                        storage, transportation, and utilization.
+                    </p>
+                </div>
+                <div class="p-service__item">
+                    <span class="__item-img">
+                        <img src="{% static '/img/top/p-service_item4.png'%}" alt="">
+                    </span>
+                    <h1 class="__item-ttl">Solar Energy Solutions</h1>
+                    <p class="__item-subttl">we're dedicated to harnessing the power of the sun to create clean,
+                        sustainable energy solutions for residential, commercial, and industrial properties. </p>
+                </div>
+                <div class="p-service__item">
+                    <span class="__item-img">
+                        <img src="{% static '/img/top/p-service_item5.png'%}" alt="">
+                    </span>
+                    <h1 class="__item-ttl">Consulting and Advisory
+                        Services</h1>
+                    <p class="__item-subttl">Tailor consulting and advisory services to meet the specific needs and
+                        goals of each client, helping them navigate the transition to a more sustainable energy
+                        ecosystem.
+                    </p>
+                </div>
+                <div class="p-service__item">
+                    <span class="__item-img">
+                        <img src="{% static '/img/top/p-service_item6.png'%}" alt="">
+                    </span>
+                    <h1 class="__item-ttl">Research and Development</h1>
+                    <p class="__item-subttl">Offer research and development services to clients looking to leverage
+                        emerging technologies and stay at the forefront of sustainability trends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-reason" id="reason">
+        <div class="p-reason__container wow bounceInUp">
+            <p class="p-reason__deco">Why Choose Us</p>
+            <h1 class="p-reason__ttl">Always there for you</h1>
+            <figure class="p-reason__img">
+                <img src="{% static '/img/top/reason.jpg'%}" alt="">
+            </figure>
+            <div class="p-reason__items">
+                <div class="p-reason__item">
+                    <figure class="__item-img">
+                        <img src="{% static '/img/top/p-reason-deco.png'%}" alt="">
+                    </figure>
+                    <div class="__item-content">
+                        <h1 class="__item-content_ttl">Investment</h1>
+                        <p class="__item-content_subttl">Your opportunity to become a part of our success with an investment of at least <br> 10.000.- USD <br> RSHCI COIN welcome <br> Co. Owner</p>
+                    </div>
+                </div>
+                <div class="p-reason__item">
+                    <figure class="__item-img">
+                        <img src="{% static '/img/top/p-reason-deco.png'%}" alt="">
+                    </figure>
+                    <div class="__item-content">
+                        <h1 class="__item-content_ttl">Hypothecs/Credits</h1>
+                        <p class="__item-content_subttl">We are offering top conditions for mortgages, privat and business credits. <br> Make your appointment to find out how much money you can save</p>
+                    </div>
+                </div>
+                <!-- <div class="p-reason__item">
+                    <figure class="__item-img">
+                        <img src="{% static '/img/top/p-reason-deco.png'%}" alt="">
+                    </figure>
+                    <div class="__item-content">
+                        <h1 class="__item-content_ttl">Crypto Currencies</h1>
+                        <p class="__item-content_subttl">Invest in our own crypto`s <a href="http://rshcoin.com">RSH COIN </a><br>
+                            Real Estate Solarenergy Hydrogen Technology Renevable energy Seniors living</p>
+                    </div>
+                </div> -->
+                <!-- <div class="p-reason__item">
+                    <figure class="__item-img">
+                        <img src="{% static '/img/top/p-reason-deco.png'%}" alt="">
+                    </figure>
+                    <div class="__item-content">
+                        <h1 class="__item-content_ttl">Crypto Currencies</h1>
+                        <p class="__item-content_subttl">Invest in our own crypto`s <a href="http://grootpandacoin.com">PCGP </a><br>
+                            Power Coin Groot & Panda, growing bamboo, natural products, detox for the whole body, seawater desalination, organic fashion superfood
+                        </p>
+                    </div>
+                </div> -->
+                <div class="p-reason__item">
+                    <figure class="__item-img">
+                        <img src="{% static '/img/top/p-reason-deco.png'%}" alt="">
+                    </figure>
+                    <div class="__item-content">
+                        <h1 class="__item-content_ttl">Leasing</h1>
+                        <p class="__item-content_subttl">The best deals for car leasing or renting, all type of cars from 6 months to 60 months like Bentley, Rolls Royce, Aston Martin, Mercedes, Audi, BMW, Mini Cooper, Volkswagen, Tesla, Toyota, Lexus, Kia, Hyundai</p>
+                    </div>
+                </div>
+                <div class="p-reason__item">
+                    <figure class="__item-img">
+                        <img src="{% static '/img/top/p-reason-deco.png'%}" alt="">
+                    </figure>
+                    <div class="__item-content">
+                        <h1 class="__item-content_ttl">Real Estate</h1>
+                        <p class="__item-content_subttl">Invest in our Seniors projects, more info click <a href="http://www.goldenage24.com">goldenage24.com</a>
+                            <br>
+                            Real Estate, Hotels for Elderlies<br>
+                            
+                            CITY Apartments<br>
+                            
+                            GOLF Apartments<br>
+                            
+                            BEACH Apartments<br><br>
+                            
+                            +&nbsp;Care System&nbsp; +&nbsp;Healthy Food</p>
+                    </div>
+                </div>
+
+            </div>
+            <iframe src="{% static '/img/top/reason.mp4' %}"  class="p-reason__video"  alt="" autoplay loop></iframe>
+            <div class="p-reason_stategy">
+                <div class="__stategy-item" id="fun-fact">
+                    <span class="timer " data-to="7500 " data-speed="3000 "></span>
+                    <span class="__ttl">User</span>
+                </div>
+                <div class="__stategy-item" id="fun-fact">
+                    <span class="timer " data-to="100 " data-speed="3000 "></span>
+                    <span class="__ttl">Teams</span>
+                </div>
+                <div class="__stategy-item" id="fun-fact">
+                    <span class="timer " data-to="30" data-speed="3000 "></span>
+                    <span class="__ttl">Experiences</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-gold" id="gold">
+        <div class="p-gold__container wow bounceInUp">
+            <a class="p-gold__deco" href="http://www.goldenage24.com">Golden Age</a>
+            <h1 class="p-gold__ttl">Golden Age 24, the Seniors Club</h1>
+            <p class="p-gold__subttl">Golden Age 24 is a vibrant and welcoming Seniors Club dedicated to enhancing
+                the lives of older adults aged 60 and above. Our club provides a supportive and engaging community
+                where seniors can socialize, stay active and pursue their passions in a welcoming and inclusive
+                environment.</p>
+            <a href="http://www.goldenage24.com" class="p-gold__link">GOLDEN AGE 24, APPLY NOW</a>
+            
+            <iframe src="{% static '/img/top/rshci-video.mp4' %}"  class="p-gold__video"  alt="" autoplay loop></iframe>
+        </div>
+    </section>
+    <section class="p-contact" id="contact">
+        <div class="p-contact__container wow fadeInUp">
+            <a class="p-contact__deco" href="mailto:rshcint@gmail.com">Get in Touch!</a>
+            <h1 class="p-contact__ttl">Let’s Start Working
+                Together</h1>
+            <form class="p-contact__form" action="{% url 'homepage:send_mail' %}" id ="p-contact__form" method="post"> 
+                {% csrf_token %}
+                <div class="__form-info">
+                    <p class="__form-info_ttl">Contact information</p>
+                    <a class="__form-info_email" href="mailto:rshcint@gmail.com">Mail&nbsp;:&nbsp;rshcint@gmail.com</a>
+                    <a href="https://t.me/RSHCINT" class="__form-info_email">Telegram&nbsp;:&nbsp;@RSHCINT</a>
+                    <figure class="__form-info_img">
+                        <img src="{% static '/img/rshci-coin.png'%}" alt="">
+                    </figure>
+                </div>
+                <div class="__form-items">
+                    <div class="__form-items_up">
+                        <div class="__form-item">
+                            <p class="__form-item_label">Your Name</p>
+                            <input type="text" class="__form-item_input" placeholder="Name" name="contact-name" id="contact-name">
+                            <p class="_error name__error">Invalid Name. Please input your name</p>
+                        </div>
+                        <div class="__form-item">
+                            <p class="__form-item_label">Your Email</p>
+                            <input type="text" class="__form-item_input" placeholder="Email" name="contact-email" id="contact-email">
+                            <p class="_error email__error">Invalid Email. Please input your email.</p>
+                        </div>
+                        <div class="__form-item">
+                            <p class="__form-item_label">Phone Number</p>
+                            <input type="text" class="__form-item_input" placeholder="Phone Number" name="contact-phone" id="contact-phone">
+                            <p class="_error phone__error">Invalid Phonenumber. Please input your Phone Number.</p>
+                        </div>
+                        <div class="__form-item">
+                            <p class="__form-item_label">Your Desire</p>
+                            <input type="text" class="__form-item_input" placeholder="Your Desire" name="contact-disires" id="contact-disires">
+                            <p class="_error disires__error">Invalid Value. Please input your type of disire.</p>
+                        </div>
+                        <div class="__form-item">
+                            <p class="__form-item_label">Invest Amount</p>
+                            <input type="text" class="__form-item_input" placeholder="Invest Amount" name="contact-investAmount" id="contact-investAmount"> 
+                        </div>
+                        <div class="__form-item">
+                            <p class="__form-item_label">Invest Periods</p>
+                            <input type="text" class="__form-item_input" placeholder="Invest Periods" name="contact-investPeriods" id="contact-investPeriods"> 
+                        </div>
+                        
+                    </div>
+                    <div class="__form-items_text">
+                        <p class="__text-label">Message</p>
+                        <Textarea class="__textarea" placeholder="Enter Message" name="contact-text" id="contact-text"></Textarea>
+                        <p class="_error text__error">Invalid Text. Please input Text.</p>
+                    </div>
+                    <div class="__form-items_terms">
+                        <input type="checkbox" id="contact-check">
+                        <p class="__form-items_terms-ttl">Agree to the Terms of Use. Click <a href="terms_use.html">here</a> for more information.</p>
+                    </div>
+                    <p class="_error agree__error">Please agree terms of use.</p>
+                    <button class="__form-items_submit" id="submit">Send Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}
+
+{% block notice %}
+<div class="coinprice-notice">
+    <div class="coinprice-notice__wrap">
+        <div class="coinprice-notice__scroll">
+                <p class="__scroll-text">RSHCI S.U.P.E.R.C.O.I.N. &nbsp;&nbsp; {{coinprice.coinprice|european_number_format}}&nbsp;€</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript%}
+<script>
+    $("#submit").click(function(e){
+        e.preventDefault()
+
+        $("input").each(function(){
+            $(this).removeClass("input-error")
+        })
+        $("textarea").each(function(){
+            $(this).removeClass("input-error")
+        })
+        $("._error").each(function(){
+            $(this).removeClass("is-active")
+        })
+        var success = true;
+        var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        var contact_name = $("#contact-name").val()
+        var contact_email = $("#contact-email").val()
+        var contact_phone = $("#contact-phone").val()
+        var contact_type = $("#contact-disires").val()
+        var contact_contents = $("#contact-text").val()
+        var contact_amount = $("#contact-investAmount").val()
+        var contact_periods = $("#contact-investPeriods").val()
+
+
+        var contact_check = $("#contact-check").prop('checked')
+        if(contact_name == ""){
+            $("#contact-name").addClass("input-error")
+            $(".name__error").addClass("is-active")
+            success = false
+        }
+        
+        if (!testEmail.test(contact_email)){
+            $("#contact-email").addClass("input-error")
+            $(".email__error").addClass("is-active")
+            success = false
+        }
+        if(contact_phone == ""){
+            $("#contact-phone").addClass("input-error")
+            $(".phone__error").addClass("is-active")
+            success = false
+        }
+        if(contact_type == ""){
+            $("#contact-disires").addClass("input-error")
+            $(".disires__error").addClass("is-active")
+            success = false
+        }
+        if(contact_contents == ""){
+            $("#contact-text").addClass("input-error")
+            $(".text__error").addClass("is-active")
+            success = false
+        }
+        if(!contact_check){ // Corrected checkbox value check
+            $(".agree__error").addClass("is-active");
+            success = false;
+        }
+
+        if(success){
+            
+
+            const form = document.getElementById('p-contact__form');
+            const formData = new FormData(form);
+            console.log(form)
+
+            fetch("{% url 'homepage:send_mail' %}", {
+                method: 'POST',
+                body: formData
+            })
+            .then((response) => {
+                
+                $("#contact-name").val("")
+                $("#contact-email").val("")
+                $("#contact-phone").val("")
+                $("#contact-disires").val("")
+                $("#contact-text").val("")
+                $("#contact-investAmount").val("")
+                $("#contact-investPeriods").val("")
+
+
+                $("#contact-check").prop('checked',false)
+                alert("The message has been successfully sent.")  
+                
+            })
+            .catch((error) => {
+                alert("Failed to send message due to server error. Please try again later.")
+                print(str(error))
+
+            });
+        }
+
+        
+    })
+</script>
+
+{% endblock %}

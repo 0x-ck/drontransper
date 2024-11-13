@@ -1,0 +1,177 @@
+{% extends "layout/base_admin.html" %}
+{% load static%}
+{% load l10n %}
+{% load custom_filter %}
+{% block content %}
+<div class="a-wrapper">
+    <nav id="sidebar" class="sidebar js-sidebar">
+        <div class="sidebar-content js-simplebar">
+            <a href="" class="sidebar-brand">
+                <span class="align-middle">RSHCI</span>
+            </a>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item active">
+                    <a class="sidebar-link" href="/admin/dashboard">
+                        <i class="align-middle" data-feather="sliders"></i><span
+                            class="align-middle">Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/users/list">
+                        <i class="align-middle" data-feather="user"></i><span class="align-middle">User Info</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/users/create">
+                        <i class="align-middle" data-feather="sliders"></i><span class="align-middle">Create
+                            Wallet</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="/admin/users/setprice">
+                        <i class="align-middle" data-feather="sliders"></i><span class="align-middle">Set Coin Price</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="a-main">
+        <header class="a-header">
+            <p class="a-header__ttl">RSHCI Management</p>
+            <span class="a-header__btn" id="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                </svg>
+            </span>
+        </header>
+        <main class="a-content">
+            <h3 class="a-content__ttl">Analytics Dashboard</h3>
+            <div class="a-content__item">
+                <div class="a-content__analytics">
+                    <div id="__users" class="analytics-item users">
+                        <h1 class="__analytics-ttl">Users</h1>
+                        <p class="__analytics-subttl">1090</p>
+                    </div>
+                    <div id="__totalcount" class="analytics-item total">
+                        <h1 class="__analytics-ttl">Total Coin</h1>
+                        <p class="__analytics-subttl">100,000,000</p>
+                    </div>
+                    <div id="__coinprice" class="analytics-item price">
+                        <h1 class="__analytics-ttl">Coin Price</h1>
+                        <p class="__analytics-subttl">5.6€</p>
+                    </div>
+                    <div id="__currentcoin" class="analytics-item sales">
+                        <h1 class="__analytics-ttl">Sales Coin</h1>
+                        <p class="__analytics-subttl">0.00,005</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="a-content__item">
+                <div class="a-content__location">
+                    <h4 class="__location-ttl">Location</h4>
+                    <div class="__location-body">
+                        <div class="map-container">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-content__calender">
+                    <h4 class="__calender-ttl">Calender</h4>
+                    <div class="__calender-body">
+
+                        <div class="wrapper">
+
+                            <div class="container-calendar">
+                                <h3 id="monthAndYear"></h3>
+
+                                <div class="button-container-calendar">
+                                    <button id="previous" onclick="previous()">&#8249;</button>
+                                    <button id="next" onclick="next()">&#8250;</button>
+                                </div>
+
+                                <table class="table-calendar" id="calendar" data-lang="en">
+                                    <thead id="thead-month"></thead>
+                                    <tbody id="calendar-body"></tbody>
+                                </table>
+
+                                <div class="footer-container-calendar">
+                                    <label for="month">Jump To: </label>
+                                    <select id="month" onchange="jump()">
+                                        <option value=0>Jan</option>
+                                        <option value=1>Feb</option>
+                                        <option value=2>Mar</option>
+                                        <option value=3>Apr</option>
+                                        <option value=4>May</option>
+                                        <option value=5>Jun</option>
+                                        <option value=6>Jul</option>
+                                        <option value=7>Aug</option>
+                                        <option value=8>Sep</option>
+                                        <option value=9>Oct</option>
+                                        <option value=10>Nov</option>
+                                        <option value=11>Dec</option>
+                                    </select>
+                                    <select id="year" onchange="jump()"></select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+        <footer class="a-footer">
+            <p class="a-footer__sttl">RSHCI@reserved in 2024.5</p>
+        </footer>
+    </div> 
+    <div class="a-dropdown">
+        <h1 class="a-dropdown-ttl">Golden Kriptonite</h1>
+        <p class="a-dropdown-subttl">RSHCI Supercoin</p>
+        <ul class="a-dropdown-nav">
+            <li class="a-dropdown-item">
+                <a class="a-dropdown-link" href="/admin/dashboard">
+                    <span class="align-middle">Dashboard</span>
+                </a>
+            </li>
+            <li class="a-dropdown-item">
+                <a class="a-dropdown-link" href="/admin/users/list">
+                    <span class="align-middle">User Info</span>
+                </a>
+            </li>
+            <li class="a-dropdown-item">
+                <a class="a-dropdown-link" href="/admin/users/create">
+                    <span class="align-middle">Create Wallet</span>
+                </a>
+            </li>
+            <li class="a-dropdown-item">
+                <a class="a-dropdown-link" href="/admin/users/setprice">
+                    <i class="align-middle" data-feather="sliders"></i><span class="align-middle">Set Coin Price</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block notice %}
+<div class="coinprice-notice">
+    <div class="coinprice-notice__wrap">
+        <div class="coinprice-notice__scroll">
+            <p class="__scroll-text">RSHCI S.U.P.E.R.C.O.I.N.&nbsp;&nbsp; {{coinprice.coinprice|european_number_format}}&nbsp;€</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+    $("#dropdown").click(function(){
+        $(".a-dropdown").addClass("is-active");
+    });
+</script>
+{% endblock %}
