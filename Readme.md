@@ -2,7 +2,7 @@
 1. Clone repository from github
 
     ```
-    git clone https://github.com/toptal0212/careerxrosspoint.com
+    git clone https://github.com/0x-ck/drontransper.com
     ```
 
 2. Install Packages for Python

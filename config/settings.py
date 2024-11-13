@@ -132,7 +132,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'rshci_db',
+            'NAME': 'drones_db',
             'USER': 'root',
             'PASSWORD': '',
             'HOST': 'localhost',
