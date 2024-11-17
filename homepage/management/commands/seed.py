@@ -7,23 +7,23 @@ from homepage.models import *
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        self.init_superuser()
+        # self.init_superuser()
         self.init_coin()
         
 
 
-    def init_superuser(self):
-        try:
-            User.objects.all().delete()
+    # def init_superuser(self):
+    #     try:
+    #         User.objects.all().delete()
 
-            user = User.objects.create_superuser("rshci_wallet", "support@rshci.com", "password")
+    #         user = User.objects.create_superuser("rshci_wallet", "support@rshci.com", "password")
            
-            User.objects.create_superuser("yoshida", "yoshidadaisuke0420@gmail.com", "password")
+    #         User.objects.create_superuser("yoshida", "yoshidadaisuke0420@gmail.com", "password")
             
             
-            print("Superuser created successfully.")
-        except Exception as error:
-            print(str(error))
+    #         print("Superuser created successfully.")
+    #     except Exception as error:
+    #         print(str(error))
     def init_coin(self):
         try:
             CoinPrice.objects.all().delete()
