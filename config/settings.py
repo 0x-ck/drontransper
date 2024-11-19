@@ -43,12 +43,12 @@ if ON_SERVER:
     CORS_ORIGIN_REGEX_WHITELIST = env.list(
         "CORS_ORIGIN_REGEX_WHITELIST", default=[]
     )
-    ALLOWED_HOSTS = ["rshci.com", "localhost",'127.0.0.1']
+    ALLOWED_HOSTS = ["fucuscoin.com", "localhost",'127.0.0.1']
     CORS_ALLOWED_ORIGINS = [
-        "https://rshci.com",
+        "https://fucuscoin.com",
     ]
     CSRF_TRUSTED_ORIGINS = [
-        "https://rshci.com",
+        "https://fucuscoin.com",
     ]
 else:
     CORS_ORIGIN_ALLOW_ALL = True

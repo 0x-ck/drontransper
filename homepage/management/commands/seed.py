@@ -16,7 +16,7 @@ class Command(BaseCommand):
     #     try:
     #         User.objects.all().delete()
 
-    #         user = User.objects.create_superuser("rshci_wallet", "support@rshci.com", "password")
+    #         user = User.objects.create_superuser("rshci_wallet", "support@fucuscoin.com", "password")
            
     #         User.objects.create_superuser("yoshida", "yoshidadaisuke0420@gmail.com", "password")
             
