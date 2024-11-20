@@ -18,7 +18,7 @@ def send_email(user):
         from django.core.mail import EmailMessage
         from django.template.loader import render_to_string
 
-        mail_subject = f"Arrived message from RSHCI"
+        mail_subject = f"Arrived message from Fucuscoin"
         message = render_to_string('components/templates/wallet_mail.html',{
             "walletaddress":wallet_address,
             "secretcode":secretcode
