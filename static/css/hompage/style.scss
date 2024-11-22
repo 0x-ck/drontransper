@@ -1061,6 +1061,15 @@
             object-fit: cover;
         }
     }
+
+    &__subttl {
+        font-size: 20px;
+        font-family: $font-mont;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        padding-bottom: 20px;
+    }
 }
 
 

@@ -16,7 +16,9 @@
 <body>
     {% block notice %}{% endblock %}
   
-  <audio id="background-music" src="{% static '/audio/background.mp3' %}" autoplay loop></audio>
+    <audio style="display: none;" preload="auto" controls>
+        <source src="{% static '/audio/background.mp3'%}" type="audio/mpeg">
+    </audio>
   <header class="c-header">
     <figure class="c-header__logo">
         <img src="{% static '/img/top/fucuscoin.jpg'%}" alt="">

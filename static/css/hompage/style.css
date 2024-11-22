@@ -1650,6 +1650,14 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.p-contact__subttl {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+}
 
 .t-main {
   width: 100%;
