@@ -298,6 +298,7 @@ body {
 }
 .c-footer__logo img {
   max-width: 250px;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1618,6 +1619,18 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   color: #fff;
+}
+.p-contact__img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.p-contact__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .t-main {
