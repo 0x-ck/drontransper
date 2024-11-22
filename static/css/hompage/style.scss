@@ -281,6 +281,20 @@
         align-items: left;
         gap: 50px;
 
+        &--top {
+            display: none;
+            font-size: 24px;
+            font-weight: 300;
+            font-family: $font-shippori;
+            line-height: 1.2;
+            color: #fff;
+            text-align: center;
+
+            @include media-sm {
+                display: block;
+            }
+        }
+
         &--deco {
             max-width: 200px;
             padding: 10px 40px;
@@ -387,7 +401,7 @@
     }
 
     &__deco {
-        max-width: 250px;
+        max-width: 280px;
         padding: 10px 40px;
         font-size: 24px;
         font-family: $font-mont;
@@ -911,6 +925,7 @@
                 }
                 img {
                     max-width: 150px;
+                    border-radius: 50%;
                     object-fit: cover;
                 }
             }

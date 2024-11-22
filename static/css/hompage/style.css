@@ -200,6 +200,9 @@ body {
   width: 200px;
   height: 200px;
 }
+.c-header__logo img {
+  border-radius: 50%;
+}
 @media screen and (max-width: 767px) {
   .c-header__logo {
     width: 100px;
@@ -901,6 +904,20 @@ body {
   align-items: left;
   gap: 50px;
 }
+.p-about__content--top {
+  display: none;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Shippori Mincho B1", serif;
+  line-height: 1.2;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-about__content--top {
+    display: block;
+  }
+}
 .p-about__content--deco {
   max-width: 200px;
   padding: 10px 40px;
@@ -1004,7 +1021,7 @@ body {
   }
 }
 .p-service__deco {
-  max-width: 250px;
+  max-width: 280px;
   padding: 10px 40px;
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
@@ -1512,6 +1529,7 @@ body {
 }
 .p-contact__form .__form-info_img img {
   max-width: 150px;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }

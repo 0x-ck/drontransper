@@ -15,12 +15,11 @@
 
 <body>
     {% block notice %}{% endblock %}
-  <audio id="backgroud-audio" autoplay loop>
-    <source src="{% static '/audio/background.mp3' %}" type="audio/mpeg">
-  </audio>
+  
+  <audio id="background-music" src="{% static '/audio/background.mp3' %}" autoplay loop></audio>
   <header class="c-header">
     <figure class="c-header__logo">
-        <img src="{% static '/img/top/rshci-logo(top).png'%}" alt="">
+        <img src="{% static '/img/top/fucuscoin.jpg'%}" alt="">
     </figure>
     <div class="c-header__menu">
         <a href="/#home" class="c-header__menu--item">HOME</a>
